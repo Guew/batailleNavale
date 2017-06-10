@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -17,7 +18,9 @@ public class Map {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long idMap;
 	private int taille = 10;
+	@Transient
 	private List<Case> cases = new ArrayList<>();
+	@Transient
 	private List<Bateau> bateaux = new ArrayList<>();
 	private int vieEnCours;
 

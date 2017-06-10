@@ -1,6 +1,7 @@
 package fr.example.bataillenavale.models.paramPartie;
 
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,11 +25,11 @@ public class Partie {
 
 	private int nbtours = 60;
 	private int tourEnCours = 0;
-	@Transient
+	@Enumerated
 	private Statut statut;
 	@OneToOne
 	private Joueur gagnant;
-	@Transient
+	@Enumerated
 	private StatutPartie condi;
 
 	@OneToOne
