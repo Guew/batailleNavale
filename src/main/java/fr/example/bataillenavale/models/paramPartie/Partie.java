@@ -31,9 +31,9 @@ public class Partie {
 	@Transient
 	private StatutPartie condi;
 
-	@Transient
+	@OneToOne
 	private Map map1;
-	@Transient
+	@OneToOne
 	private Map map2;
 
 	public Partie() {

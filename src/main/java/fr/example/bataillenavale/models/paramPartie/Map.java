@@ -4,10 +4,17 @@ package fr.example.bataillenavale.models.paramPartie;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
+@Entity
 public class Map {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long idMap;
 	private int taille = 10;
 	private List<Case> cases = new ArrayList<>();
